@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Bio Nature</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🍃 Bio Nature</div>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links" id="navMenu">
+      <a href="index.html">Accueil</a>
+      <a href="produits.html">Nos Produits</a>
+      <a href="a-propos.html">À Propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="hero-buttons">
+      <button class="btn-primary">Voir Produits</button>
+      <button class="btn-secondary">Nos Valeurs</button>
+    </div>
+  </header>
+
+  <main class="contact">
+    <h1>Contactez-nous</h1>
+    <form class="contact-form">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit" class="btn-primary">Envoyer</button>
+    </form>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.646162372941!2d-1.5535072848228942!3d47.21013517915982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805eebac1ff7dfb%3A0x34ae1721bc3b7ba!2s7%20Rue%20Dugommier%2C%2044000%20Nantes!5e0!3m2!1sfr!2sfr!4v1719833021000!5m2!1sfr!2sfr"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>🍃 Bio Nature</div>
+      <div>Accueil | Produits | À Propos | Contact</div>
+      <div>Ouvert : Lun - Sam, 9h - 19h</div>
+      <div>📍 Adresse | 📞 0625255484</div>
+    </div>
+    <p>&copy; 2025 Bio Nature</p>
+  </footer>
+
+  <script src="utilities.js"></script>
+  <script src="manager.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
