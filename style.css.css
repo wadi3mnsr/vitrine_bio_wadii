@@ -1,0 +1,234 @@
+/* ======================================================
+   VARIABLES GLOBALES
+   ====================================================== */
+:root {
+  --warm-100: #FCEEE0;
+  --warm-200: #F7DCC4;
+  --neutral-bg: #FBFAF9;
+  --neutral-fg: #232923;
+  --muted: #798679;
+  --primary: #4C8A28;
+  --nature-green: #366619;
+  --radius-small: 10px;
+  --radius-card: 12px;
+  --radius-large: 24px;
+}
+
+/* ======================================================
+   STRUCTURE DE BASE
+   ====================================================== */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--neutral-bg);
+  color: var(--neutral-fg);
+}
+
+section, main {
+  padding: 80px 32px;
+  text-align: center;
+}
+
+/* Titres principaux */
+h1, h2 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 48px;
+  margin-bottom: 24px;
+}
+
+/* ======================================================
+   BARRE DE NAVIGATION
+   ====================================================== */
+header.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: rgba(251, 250, 249, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--neutral-fg);
+}
+
+/* Menu Burger pour mobile */
+.burger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ======================================================
+   BOUTONS
+   ====================================================== */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: none;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+
+/* ======================================================
+   SECTION HERO
+   ====================================================== */
+.hero {
+  position: relative;
+  padding: 80px 32px;
+  background-image: url('https://www.ermitage-touraine.fr/wp-content/uploads/2015/08/magasin-bio.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* assombrit l’image */
+  z-index: 0;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 32.5px;
+  margin-bottom: 32px;
+}
+
+.hero-buttons button {
+  margin: 24px;
+}
+
+/* ======================================================
+   GRILLES : PRODUITS, VALEURS, FOOTER
+   ====================================================== */
+.grid-produits,
+.grid-valeurs,
+.footer-grid {
+  display: grid;
+  gap: 24px;
+  margin: 32px auto;
+}
+
+.grid-produits {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-valeurs {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ======================================================
+   CARTES / ÉLÉMENTS DE CONTENU
+   ====================================================== */
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: var(--radius-card);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover .card-title {
+  cursor: pointer;
+}
+
+.card-list {
+  display: none;
+  margin-top: 10px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* ======================================================
+   SECTION CTA (appel à l'action)
+   ====================================================== */
+.cta {
+  background: var(--nature-green);
+  color: white;
+  padding: 80px 32px;
+}
+
+/* ======================================================
+   FOOTER
+   ====================================================== */
+footer {
+  background: var(--muted);
+  color: white;
+  padding: 48px 32px;
+  text-align: center;
+}
+
+/* ======================================================
+   FORMULAIRE DE CONTACT
+   ====================================================== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto 48px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius-small);
+  font-size: 16px;
+}
+
+/* Carte avec map intégrée */
+.map iframe {
+  border-radius: var(--radius-card);
+}
+
+/* ======================================================
+   ANIMATIONS
+   ====================================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

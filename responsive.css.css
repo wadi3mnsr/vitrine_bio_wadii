@@ -1,0 +1,82 @@
+
+/* ======================================================
+   RESPONSIVE DESIGN
+   ====================================================== */
+
+/* ---------- Mobile : jusqu'à 767px ---------- */
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(251, 250, 249, 0.95);
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .grid-produits,
+  .grid-valeurs,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
+
+/* ---------- Tablette : 768px à 1023px ---------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .grid-produits,
+  .grid-valeurs,
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Desktop moyen : 1024px à 1199px ---------- */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .hero h1 {
+    font-size: 54px;
+  }
+
+  .grid-produits,
+  .grid-valeurs,
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- Grand écran : 1200px et plus ---------- */
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 60px;
+  }
+
+  .grid-produits,
+  .grid-valeurs,
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
