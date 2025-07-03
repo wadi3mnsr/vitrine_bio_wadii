@@ -9,7 +9,7 @@ Site vitrine pour **Bio Nature**, une entreprise engagée dans la vente de produ
 
 ###  Démo en ligne
 
-➡️ [Voir le site](https://wadi3mnsr.github.io/vitrine_bio_wadii)
+➡️ [Voir le site](https://github.com/wadi3mnsr/vitrine_bio_wadii.git)
 
 ##  Technologies utilisées
 
