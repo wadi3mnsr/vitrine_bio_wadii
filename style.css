@@ -277,4 +277,41 @@ footer {
   border-radius: 12px;
 }
 
+/* Cacher le menu et afficher en vertical sur mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+/* Par défaut (desktop), on garde le menu visible et on cache le burger */
+.burger {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
 

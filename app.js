@@ -17,3 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
   CardManager.initCardHover();
 });
 
+function toggleMenu() {
+  const nav = document.getElementById("navMenu");
+  if (nav) {
+    nav.classList.toggle("show");
+  }
+}
+
